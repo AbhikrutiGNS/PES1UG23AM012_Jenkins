@@ -23,6 +23,8 @@ pipeline {
             steps {
                 sh '''
                 docker rm -f nginx-lb || true
+
+                sleep 5
                 
                 docker run -d \
                   --name nginx-lb \
